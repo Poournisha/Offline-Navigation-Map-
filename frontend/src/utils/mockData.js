@@ -204,6 +204,308 @@ export const mockData = {
       coordinates: [13.0569, 80.2570],
       type: 'commercial',
       category: 'Shopping Mall'
+    },
+    // Coimbatore, Tamil Nadu
+    {
+      id: 25,
+      name: 'Marudhamalai Temple',
+      address: 'Marudhamalai, Coimbatore, Tamil Nadu',
+      coordinates: [11.0510, 76.8936],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 26,
+      name: 'Brookefields Mall',
+      address: 'Brookefields, Coimbatore, Tamil Nadu',
+      coordinates: [11.0168, 76.9558],
+      type: 'commercial',
+      category: 'Shopping Mall'
+    },
+    {
+      id: 27,
+      name: 'Coimbatore Junction',
+      address: 'Railway Station Road, Coimbatore, Tamil Nadu',
+      coordinates: [11.0021, 76.9648],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Madurai, Tamil Nadu
+    {
+      id: 28,
+      name: 'Meenakshi Amman Temple',
+      address: 'Madurai Main, Madurai, Tamil Nadu',
+      coordinates: [9.9195, 78.1193],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 29,
+      name: 'Thirumalai Nayakkar Palace',
+      address: 'Palace Rd, Madurai, Tamil Nadu',
+      coordinates: [9.9252, 78.1198],
+      type: 'landmark',
+      category: 'Palace'
+    },
+    {
+      id: 30,
+      name: 'Madurai Junction',
+      address: 'Railway Station Road, Madurai, Tamil Nadu',
+      coordinates: [9.9258, 78.1090],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Tiruchirappalli (Trichy), Tamil Nadu
+    {
+      id: 31,
+      name: 'Rockfort Temple',
+      address: 'Rock Fort, Tiruchirappalli, Tamil Nadu',
+      coordinates: [10.8054, 78.6918],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 32,
+      name: 'Srirangam Temple',
+      address: 'Srirangam, Tiruchirappalli, Tamil Nadu',
+      coordinates: [10.8624, 78.6952],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 33,
+      name: 'Trichy Junction',
+      address: 'Junction Railway Station, Tiruchirappalli, Tamil Nadu',
+      coordinates: [10.8082, 78.6855],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Salem, Tamil Nadu
+    {
+      id: 34,
+      name: 'Yercaud',
+      address: 'Yercaud, Salem, Tamil Nadu',
+      coordinates: [11.7849, 78.2081],
+      type: 'hill_station',
+      category: 'Hill Station'
+    },
+    {
+      id: 35,
+      name: 'Salem Junction',
+      address: 'Railway Station Road, Salem, Tamil Nadu',
+      coordinates: [11.6854, 78.1462],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    {
+      id: 36,
+      name: 'Mettur Dam',
+      address: 'Mettur, Salem, Tamil Nadu',
+      coordinates: [11.7898, 77.8007],
+      type: 'landmark',
+      category: 'Dam'
+    },
+    // Tirunelveli, Tamil Nadu
+    {
+      id: 37,
+      name: 'Nellaiappar Temple',
+      address: 'Tirunelveli, Tamil Nadu',
+      coordinates: [8.7139, 77.7567],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 38,
+      name: 'Tirunelveli Junction',
+      address: 'Railway Station Road, Tirunelveli, Tamil Nadu',
+      coordinates: [8.7093, 77.7568],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Vellore, Tamil Nadu
+    {
+      id: 39,
+      name: 'Vellore Fort',
+      address: 'Fort Road, Vellore, Tamil Nadu',
+      coordinates: [12.9184, 79.1325],
+      type: 'landmark',
+      category: 'Historical Fort'
+    },
+    {
+      id: 40,
+      name: 'Golden Temple Vellore',
+      address: 'Sripuram, Vellore, Tamil Nadu',
+      coordinates: [12.9249, 79.1302],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 41,
+      name: 'Vellore Cantonment',
+      address: 'Cantonment, Vellore, Tamil Nadu',
+      coordinates: [12.9163, 79.1290],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Erode, Tamil Nadu
+    {
+      id: 42,
+      name: 'Erode Junction',
+      address: 'Railway Station Road, Erode, Tamil Nadu',
+      coordinates: [11.3410, 77.7172],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    {
+      id: 43,
+      name: 'Thindal Murugan Temple',
+      address: 'Thindal, Erode, Tamil Nadu',
+      coordinates: [11.3293, 77.7085],
+      type: 'religious',
+      category: 'Temple'
+    },
+    // Tirupur, Tamil Nadu
+    {
+      id: 44,
+      name: 'Tirupur',
+      address: 'Tirupur, Tamil Nadu',
+      coordinates: [11.1085, 77.3411],
+      type: 'commercial',
+      category: 'Textile City'
+    },
+    {
+      id: 45,
+      name: 'Avinashi Road',
+      address: 'Avinashi Road, Tirupur, Tamil Nadu',
+      coordinates: [11.1055, 77.3498],
+      type: 'commercial',
+      category: 'Commercial Area'
+    },
+    // Thanjavur, Tamil Nadu
+    {
+      id: 46,
+      name: 'Brihadeeswarar Temple',
+      address: 'Thanjavur, Tamil Nadu',
+      coordinates: [10.7825, 79.1313],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 47,
+      name: 'Thanjavur Palace',
+      address: 'East Main St, Thanjavur, Tamil Nadu',
+      coordinates: [10.7881, 79.1378],
+      type: 'landmark',
+      category: 'Palace'
+    },
+    {
+      id: 48,
+      name: 'Thanjavur Junction',
+      address: 'Railway Station Road, Thanjavur, Tamil Nadu',
+      coordinates: [10.7858, 79.1382],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Dindigul, Tamil Nadu
+    {
+      id: 49,
+      name: 'Dindigul Rock Fort',
+      address: 'Dindigul, Tamil Nadu',
+      coordinates: [10.3624, 77.9694],
+      type: 'landmark',
+      category: 'Fort'
+    },
+    {
+      id: 50,
+      name: 'Dindigul Junction',
+      address: 'Railway Station Road, Dindigul, Tamil Nadu',
+      coordinates: [10.3673, 77.9803],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    // Kanyakumari, Tamil Nadu
+    {
+      id: 51,
+      name: 'Kanyakumari Beach',
+      address: 'Kanyakumari, Tamil Nadu',
+      coordinates: [8.0883, 77.5385],
+      type: 'beach',
+      category: 'Beach'
+    },
+    {
+      id: 52,
+      name: 'Vivekananda Rock Memorial',
+      address: 'Kanyakumari, Tamil Nadu',
+      coordinates: [8.0773, 77.5496],
+      type: 'landmark',
+      category: 'Memorial'
+    },
+    {
+      id: 53,
+      name: 'Thiruvalluvar Statue',
+      address: 'Kanyakumari, Tamil Nadu',
+      coordinates: [8.0773, 77.5496],
+      type: 'landmark',
+      category: 'Statue'
+    },
+    // Puducherry (nearby, often associated with TN)
+    {
+      id: 54,
+      name: 'Promenade Beach',
+      address: 'Beach Road, Puducherry',
+      coordinates: [11.9139, 79.8145],
+      type: 'beach',
+      category: 'Beach'
+    },
+    {
+      id: 55,
+      name: 'Aurobindo Ashram',
+      address: 'Rue de la Marine, Puducherry',
+      coordinates: [11.9416, 79.8083],
+      type: 'spiritual',
+      category: 'Ashram'
+    },
+    // Kodaikanal, Tamil Nadu
+    {
+      id: 56,
+      name: 'Kodaikanal Lake',
+      address: 'Kodaikanal, Tamil Nadu',
+      coordinates: [10.2381, 77.4892],
+      type: 'lake',
+      category: 'Lake'
+    },
+    {
+      id: 57,
+      name: 'Coaker\'s Walk',
+      address: 'Kodaikanal, Tamil Nadu',
+      coordinates: [10.2325, 77.4864],
+      type: 'viewpoint',
+      category: 'Viewpoint'
+    },
+    // Ooty (Udhagamandalam), Tamil Nadu
+    {
+      id: 58,
+      name: 'Ooty Lake',
+      address: 'Ooty, Tamil Nadu',
+      coordinates: [11.4086, 76.6950],
+      type: 'lake',
+      category: 'Lake'
+    },
+    {
+      id: 59,
+      name: 'Botanical Gardens Ooty',
+      address: 'Ooty, Tamil Nadu',
+      coordinates: [11.4127, 76.7085],
+      type: 'garden',
+      category: 'Botanical Garden'
+    },
+    {
+      id: 60,
+      name: 'Nilgiri Mountain Railway',
+      address: 'Ooty, Tamil Nadu',
+      coordinates: [11.4102, 76.6950],
+      type: 'transportation',
+      category: 'Heritage Railway'
     }
   ],
 
