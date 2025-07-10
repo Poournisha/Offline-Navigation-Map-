@@ -589,6 +589,70 @@ export const mockData = {
       coordinates: [12.9507, 77.5848],
       category: 'recreation',
       dateAdded: '2024-02-25T07:30:00Z'
+    },
+    {
+      id: 11,
+      name: 'Meenakshi Temple',
+      address: 'Madurai Main, Madurai, Tamil Nadu',
+      coordinates: [9.9195, 78.1193],
+      category: 'religious',
+      dateAdded: '2024-03-01T09:00:00Z'
+    },
+    {
+      id: 12,
+      name: 'Coimbatore Office',
+      address: 'Avinashi Road, Coimbatore, Tamil Nadu',
+      coordinates: [11.0168, 76.9558],
+      category: 'work',
+      dateAdded: '2024-03-05T14:30:00Z'
+    },
+    {
+      id: 13,
+      name: 'Kodaikanal Lake',
+      address: 'Kodaikanal, Tamil Nadu',
+      coordinates: [10.2381, 77.4892],
+      category: 'recreation',
+      dateAdded: '2024-03-10T16:00:00Z'
+    },
+    {
+      id: 14,
+      name: 'Ooty Botanical Gardens',
+      address: 'Ooty, Tamil Nadu',
+      coordinates: [11.4127, 76.7085],
+      category: 'recreation',
+      dateAdded: '2024-03-15T11:45:00Z'
+    },
+    {
+      id: 15,
+      name: 'Kanyakumari Beach',
+      address: 'Kanyakumari, Tamil Nadu',
+      coordinates: [8.0883, 77.5385],
+      category: 'favorite',
+      dateAdded: '2024-03-20T17:30:00Z'
+    },
+    {
+      id: 16,
+      name: 'Trichy Rock Fort',
+      address: 'Rock Fort, Tiruchirappalli, Tamil Nadu',
+      coordinates: [10.8054, 78.6918],
+      category: 'favorite',
+      dateAdded: '2024-03-25T12:15:00Z'
+    },
+    {
+      id: 17,
+      name: 'Salem Home',
+      address: 'Five Roads, Salem, Tamil Nadu',
+      coordinates: [11.6854, 78.1462],
+      category: 'home',
+      dateAdded: '2024-03-30T08:00:00Z'
+    },
+    {
+      id: 18,
+      name: 'Vellore Fort',
+      address: 'Fort Road, Vellore, Tamil Nadu',
+      coordinates: [12.9184, 79.1325],
+      category: 'favorite',
+      dateAdded: '2024-04-01T10:30:00Z'
     }
   ],
 
