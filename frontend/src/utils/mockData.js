@@ -355,6 +355,7 @@ export const mockData = {
   ],
 
   offlineAreas: [
+    // South Korea
     {
       id: 1,
       name: 'Seoul City Center',
@@ -398,6 +399,97 @@ export const mockData = {
       coordinates: [37.5717, 126.9851],
       size: '38 MB',
       lastUpdated: '2024-01-30',
+      status: 'available'
+    },
+    // India
+    {
+      id: 6,
+      name: 'Mumbai Central',
+      description: 'South Mumbai including Colaba, Fort, and Marine Drive',
+      coordinates: [18.9220, 72.8347],
+      size: '156 MB',
+      lastUpdated: '2024-02-01',
+      status: 'downloaded'
+    },
+    {
+      id: 7,
+      name: 'Bandra-Kurla Complex',
+      description: 'Mumbai business district with offices and malls',
+      coordinates: [19.0596, 72.8656],
+      size: '89 MB',
+      lastUpdated: '2024-02-05',
+      status: 'available'
+    },
+    {
+      id: 8,
+      name: 'New Delhi Central',
+      description: 'Central Delhi including Connaught Place and India Gate',
+      coordinates: [28.6315, 77.2167],
+      size: '142 MB',
+      lastUpdated: '2024-02-08',
+      status: 'downloaded'
+    },
+    {
+      id: 9,
+      name: 'Old Delhi',
+      description: 'Historic Delhi including Red Fort and Chandni Chowk',
+      coordinates: [28.6562, 77.2410],
+      size: '78 MB',
+      lastUpdated: '2024-02-10',
+      status: 'available'
+    },
+    {
+      id: 10,
+      name: 'Bangalore IT Corridor',
+      description: 'Electronic City and Whitefield tech hubs',
+      coordinates: [12.8456, 77.6603],
+      size: '134 MB',
+      lastUpdated: '2024-02-12',
+      status: 'available'
+    },
+    {
+      id: 11,
+      name: 'Bangalore City Center',
+      description: 'MG Road, Brigade Road, and Cubbon Park area',
+      coordinates: [12.9719, 77.5937],
+      size: '95 MB',
+      lastUpdated: '2024-02-15',
+      status: 'downloaded'
+    },
+    {
+      id: 12,
+      name: 'Chennai Central',
+      description: 'Central Chennai including T. Nagar and Marina Beach',
+      coordinates: [13.0489, 80.2519],
+      size: '118 MB',
+      lastUpdated: '2024-02-18',
+      status: 'available'
+    },
+    {
+      id: 13,
+      name: 'Kolkata Central',
+      description: 'Central Kolkata including Park Street and Victoria Memorial',
+      coordinates: [22.5726, 88.3639],
+      size: '102 MB',
+      lastUpdated: '2024-02-20',
+      status: 'available'
+    },
+    {
+      id: 14,
+      name: 'Hyderabad HITEC City',
+      description: 'Cyberabad area with IT companies and malls',
+      coordinates: [17.4435, 78.3772],
+      size: '87 MB',
+      lastUpdated: '2024-02-22',
+      status: 'available'
+    },
+    {
+      id: 15,
+      name: 'Pune IT Parks',
+      description: 'Hinjewadi and Magarpatta IT park areas',
+      coordinates: [18.5912, 73.7389],
+      size: '76 MB',
+      lastUpdated: '2024-02-25',
       status: 'available'
     }
   ],
