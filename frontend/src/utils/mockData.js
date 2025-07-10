@@ -239,6 +239,54 @@ export const mockData = {
       coordinates: [37.5563, 126.9236],
       category: 'fitness',
       dateAdded: '2024-01-25T18:00:00Z'
+    },
+    {
+      id: 5,
+      name: 'Mumbai Office',
+      address: 'Bandra Kurla Complex, Mumbai, Maharashtra',
+      coordinates: [19.0596, 72.8656],
+      category: 'work',
+      dateAdded: '2024-02-01T14:00:00Z'
+    },
+    {
+      id: 6,
+      name: 'Gateway of India',
+      address: 'Apollo Bandar, Colaba, Mumbai, Maharashtra',
+      coordinates: [18.9220, 72.8347],
+      category: 'favorite',
+      dateAdded: '2024-02-05T11:30:00Z'
+    },
+    {
+      id: 7,
+      name: 'Delhi Home',
+      address: 'Connaught Place, New Delhi',
+      coordinates: [28.6315, 77.2167],
+      category: 'home',
+      dateAdded: '2024-02-10T08:00:00Z'
+    },
+    {
+      id: 8,
+      name: 'Bangalore Tech Park',
+      address: 'Electronic City, Bengaluru, Karnataka',
+      coordinates: [12.8456, 77.6603],
+      category: 'work',
+      dateAdded: '2024-02-15T16:45:00Z'
+    },
+    {
+      id: 9,
+      name: 'Marina Beach',
+      address: 'Marina Beach, Chennai, Tamil Nadu',
+      coordinates: [13.0489, 80.2519],
+      category: 'favorite',
+      dateAdded: '2024-02-20T18:00:00Z'
+    },
+    {
+      id: 10,
+      name: 'Lalbagh Garden',
+      address: 'Mavalli, Bengaluru, Karnataka',
+      coordinates: [12.9507, 77.5848],
+      category: 'recreation',
+      dateAdded: '2024-02-25T07:30:00Z'
     }
   ],
 
