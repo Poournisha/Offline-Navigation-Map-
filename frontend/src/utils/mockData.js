@@ -8,6 +8,7 @@ export const mockData = {
   },
 
   searchResults: [
+    // Seoul, South Korea
     {
       id: 1,
       name: 'Seoul Station',
@@ -71,6 +72,138 @@ export const mockData = {
       coordinates: [37.5693, 126.9775],
       type: 'nature',
       category: 'Stream'
+    },
+    // Mumbai, India
+    {
+      id: 9,
+      name: 'Gateway of India',
+      address: 'Apollo Bandar, Colaba, Mumbai, Maharashtra',
+      coordinates: [18.9220, 72.8347],
+      type: 'landmark',
+      category: 'Monument'
+    },
+    {
+      id: 10,
+      name: 'Chhatrapati Shivaji Terminus',
+      address: 'Dr Dadabhai Naoroji Rd, Fort, Mumbai, Maharashtra',
+      coordinates: [18.9401, 72.8355],
+      type: 'transportation',
+      category: 'Railway Station'
+    },
+    {
+      id: 11,
+      name: 'Marine Drive',
+      address: 'Netaji Subhash Chandra Bose Rd, Mumbai, Maharashtra',
+      coordinates: [18.9439, 72.8230],
+      type: 'landmark',
+      category: 'Promenade'
+    },
+    {
+      id: 12,
+      name: 'Juhu Beach',
+      address: 'Juhu, Mumbai, Maharashtra',
+      coordinates: [19.0990, 72.8265],
+      type: 'beach',
+      category: 'Beach'
+    },
+    // Delhi, India
+    {
+      id: 13,
+      name: 'Red Fort',
+      address: 'Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi',
+      coordinates: [28.6562, 77.2410],
+      type: 'landmark',
+      category: 'Historical Monument'
+    },
+    {
+      id: 14,
+      name: 'India Gate',
+      address: 'Rajpath, India Gate, New Delhi',
+      coordinates: [28.6129, 77.2295],
+      type: 'landmark',
+      category: 'War Memorial'
+    },
+    {
+      id: 15,
+      name: 'Connaught Place',
+      address: 'Connaught Place, New Delhi',
+      coordinates: [28.6315, 77.2167],
+      type: 'commercial',
+      category: 'Shopping District'
+    },
+    {
+      id: 16,
+      name: 'Lotus Temple',
+      address: 'Lotus Temple Rd, Bahapur, Shambhu Dayal Bagh, Kalkaji, New Delhi',
+      coordinates: [28.5535, 77.2588],
+      type: 'religious',
+      category: 'Temple'
+    },
+    // Bangalore, India
+    {
+      id: 17,
+      name: 'Lalbagh Botanical Garden',
+      address: 'Mavalli, Bengaluru, Karnataka',
+      coordinates: [12.9507, 77.5848],
+      type: 'park',
+      category: 'Botanical Garden'
+    },
+    {
+      id: 18,
+      name: 'Bangalore Palace',
+      address: 'Vasanth Nagar, Bengaluru, Karnataka',
+      coordinates: [12.9981, 77.5925],
+      type: 'landmark',
+      category: 'Palace'
+    },
+    {
+      id: 19,
+      name: 'Cubbon Park',
+      address: 'Kasturba Rd, Sampangi Rama Nagar, Bengaluru, Karnataka',
+      coordinates: [12.9719, 77.5937],
+      type: 'park',
+      category: 'Public Park'
+    },
+    {
+      id: 20,
+      name: 'UB City Mall',
+      address: 'UB City, Vittal Mallya Rd, Bengaluru, Karnataka',
+      coordinates: [12.9719, 77.5937],
+      type: 'commercial',
+      category: 'Shopping Mall'
+    },
+    // Chennai, India
+    {
+      id: 21,
+      name: 'Marina Beach',
+      address: 'Marina Beach, Chennai, Tamil Nadu',
+      coordinates: [13.0489, 80.2519],
+      type: 'beach',
+      category: 'Beach'
+    },
+    {
+      id: 22,
+      name: 'Kapaleeshwarar Temple',
+      address: 'Mylapore, Chennai, Tamil Nadu',
+      coordinates: [13.0339, 80.2619],
+      type: 'religious',
+      category: 'Temple'
+    },
+    {
+      id: 23,
+      name: 'Fort St. George',
+      address: 'Fort St George, Chennai, Tamil Nadu',
+      coordinates: [13.0827, 80.2707],
+      type: 'landmark',
+      category: 'Historical Fort'
+    },
+    {
+      id: 24,
+      name: 'Express Avenue Mall',
+      address: 'Express Avenue, Royapettah, Chennai, Tamil Nadu',
+      coordinates: [13.0569, 80.2570],
+      type: 'commercial',
+      category: 'Shopping Mall'
     }
   ],
 
