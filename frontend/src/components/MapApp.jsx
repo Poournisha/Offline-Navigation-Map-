@@ -38,47 +38,104 @@ import NavigationPanel from './NavigationPanel';
 import RoutePanel from './RoutePanel';
 import BookmarksPanel from './BookmarksPanel';
 import OfflinePanel from './OfflinePanel';
-import { mockData } from '../utils/mockData';
+
+// Import API services
+import { 
+  searchLocations, 
+  getBookmarks, 
+  getOfflineAreas, 
+  calculateRoute,
+  createBookmark,
+  deleteBookmark,
+  downloadOfflineArea,
+  deleteOfflineArea 
+} from '../services/api';
 
 const MapApp = () => {
   const [activePanel, setActivePanel] = useState('search');
   const [searchResults, setSearchResults] = useState([]);
   const [currentRoute, setCurrentRoute] = useState(null);
-  const [bookmarks, setBookmarks] = useState(mockData.bookmarks);
+  const [bookmarks, setBookmarks] = useState([]);
   const [isNavigating, setIsNavigating] = useState(false);
-  const [currentLocation, setCurrentLocation] = useState(mockData.currentLocation);
+  const [currentLocation, setCurrentLocation] = useState({
+    id: 'current',
+    name: 'Current Location',
+    address: '123 Main St, Chennai, Tamil Nadu',
+    coordinates: [13.0827, 80.2707],
+    type: 'current'
+  });
   const [mapStyle, setMapStyle] = useState('street');
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [audioEnabled, setAudioEnabled] = useState(true);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [routeInstructions, setRouteInstructions] = useState([]);
   const [currentInstruction, setCurrentInstruction] = useState(0);
-  const [offlineAreas, setOfflineAreas] = useState(mockData.offlineAreas);
+  const [offlineAreas, setOfflineAreas] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSearch = (query) => {
-    // Mock search with delay
-    setTimeout(() => {
-      const results = mockData.searchResults.filter(item => 
-        item.name.toLowerCase().includes(query.toLowerCase()) ||
-        item.address.toLowerCase().includes(query.toLowerCase())
-      );
-      setSearchResults(results);
-    }, 300);
+  // Load initial data
+  useEffect(() => {
+    loadInitialData();
+  }, []);
+
+  const loadInitialData = async () => {
+    try {
+      setLoading(true);
+      const [bookmarksData, offlineAreasData] = await Promise.all([
+        getBookmarks(),
+        getOfflineAreas()
+      ]);
+      setBookmarks(bookmarksData);
+      setOfflineAreas(offlineAreasData);
+    } catch (err) {
+      setError('Failed to load initial data');
+      console.error('Error loading initial data:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleRouteCalculation = (from, to) => {
-    // Mock route calculation
-    const route = {
-      from,
-      to,
-      distance: '12.5 km',
-      duration: '18 minutes',
-      coordinates: mockData.routeCoordinates,
-      instructions: mockData.routeInstructions
-    };
-    setCurrentRoute(route);
-    setRouteInstructions(route.instructions);
-    setActivePanel('route');
+  const handleSearch = async (query) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const results = await searchLocations(query, 20);
+      setSearchResults(results);
+    } catch (err) {
+      setError('Failed to search locations');
+      console.error('Error searching locations:', err);
+      setSearchResults([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRouteCalculation = async (from, to) => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const routeRequest = {
+        from_name: from.name,
+        from_address: from.address,
+        from_coordinates: from.coordinates,
+        to_name: to.name,
+        to_address: to.address,
+        to_coordinates: to.coordinates,
+        route_type: 'fastest'
+      };
+
+      const route = await calculateRoute(routeRequest);
+      setCurrentRoute(route);
+      setRouteInstructions(route.instructions || []);
+      setActivePanel('route');
+    } catch (err) {
+      setError('Failed to calculate route');
+      console.error('Error calculating route:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const startNavigation = () => {
@@ -93,60 +150,127 @@ const MapApp = () => {
     setCurrentInstruction(0);
   };
 
-  const addBookmark = (location) => {
-    const newBookmark = {
-      id: Date.now(),
-      name: location.name,
-      address: location.address,
-      coordinates: location.coordinates,
-      category: 'custom',
-      dateAdded: new Date().toISOString()
-    };
-    setBookmarks([...bookmarks, newBookmark]);
+  const addBookmark = async (location) => {
+    try {
+      setLoading(true);
+      const newBookmark = {
+        name: location.name,
+        address: location.address,
+        coordinates: location.coordinates,
+        category: 'custom',
+        notes: 'Added from map'
+      };
+      
+      const createdBookmark = await createBookmark(newBookmark);
+      setBookmarks([...bookmarks, createdBookmark]);
+    } catch (err) {
+      setError('Failed to add bookmark');
+      console.error('Error adding bookmark:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const removeBookmark = (id) => {
-    setBookmarks(bookmarks.filter(bookmark => bookmark.id !== id));
+  const removeBookmark = async (id) => {
+    try {
+      setLoading(true);
+      await deleteBookmark(id);
+      setBookmarks(bookmarks.filter(bookmark => bookmark.id !== id));
+    } catch (err) {
+      setError('Failed to remove bookmark');
+      console.error('Error removing bookmark:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const downloadOfflineArea = (area) => {
-    // Mock offline download
-    const updatedAreas = offlineAreas.map(item => 
-      item.id === area.id 
-        ? { ...item, status: 'downloading', progress: 0 }
-        : item
-    );
-    setOfflineAreas(updatedAreas);
-
-    // Simulate download progress
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += 10;
+  const downloadOfflineAreaHandler = async (area) => {
+    try {
+      setLoading(true);
+      await downloadOfflineArea(area.id);
+      
+      // Update local state to show downloading
       const updatedAreas = offlineAreas.map(item => 
         item.id === area.id 
-          ? { ...item, progress }
+          ? { ...item, status: 'downloading', progress: 0 }
           : item
       );
       setOfflineAreas(updatedAreas);
 
+      // Simulate download progress
+      simulateDownloadProgress(area.id);
+    } catch (err) {
+      setError('Failed to start download');
+      console.error('Error downloading offline area:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const simulateDownloadProgress = (areaId) => {
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 10;
+      setOfflineAreas(prev => prev.map(item => 
+        item.id === areaId 
+          ? { ...item, progress }
+          : item
+      ));
+
       if (progress >= 100) {
         clearInterval(interval);
-        const finalAreas = offlineAreas.map(item => 
-          item.id === area.id 
+        setOfflineAreas(prev => prev.map(item => 
+          item.id === areaId 
             ? { ...item, status: 'downloaded', progress: 100 }
             : item
-        );
-        setOfflineAreas(finalAreas);
+        ));
       }
     }, 500);
+  };
+
+  const deleteOfflineAreaHandler = async (id) => {
+    try {
+      setLoading(true);
+      await deleteOfflineArea(id);
+      setOfflineAreas(offlineAreas.filter(area => area.id !== id));
+    } catch (err) {
+      setError('Failed to delete offline area');
+      console.error('Error deleting offline area:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const toggleFullscreen = () => {
     setIsFullscreen(!isFullscreen);
   };
 
+  if (loading && bookmarks.length === 0) {
+    return (
+      <div className="h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-lg font-medium text-gray-700">Loading OfflineNav...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="h-screen bg-gray-50 flex overflow-hidden">
+      {/* Error Banner */}
+      {error && (
+        <div className="absolute top-0 left-0 right-0 bg-red-500 text-white p-2 text-center z-50">
+          {error}
+          <button 
+            onClick={() => setError(null)}
+            className="ml-2 text-white hover:text-gray-200"
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       {/* Sidebar */}
       <div className={`${isFullscreen ? 'hidden' : 'w-80'} bg-white shadow-lg border-r border-gray-200 flex flex-col transition-all duration-300`}>
         {/* Header */}
@@ -204,6 +328,7 @@ const MapApp = () => {
                 onRouteRequest={handleRouteCalculation}
                 onBookmarkAdd={addBookmark}
                 currentLocation={currentLocation}
+                loading={loading}
               />
             </TabsContent>
             <TabsContent value="route" className="mt-0">
@@ -230,13 +355,15 @@ const MapApp = () => {
                 onRemoveBookmark={removeBookmark}
                 onRouteRequest={handleRouteCalculation}
                 currentLocation={currentLocation}
+                loading={loading}
               />
             </TabsContent>
             <TabsContent value="offline" className="mt-0">
               <OfflinePanel 
                 offlineAreas={offlineAreas}
-                onDownloadArea={downloadOfflineArea}
-                onDeleteArea={(id) => setOfflineAreas(offlineAreas.filter(area => area.id !== id))}
+                onDownloadArea={downloadOfflineAreaHandler}
+                onDeleteArea={deleteOfflineAreaHandler}
+                loading={loading}
               />
             </TabsContent>
           </Tabs>
