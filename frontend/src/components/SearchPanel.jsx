@@ -118,9 +118,9 @@ const SearchPanel = ({
             onClick={() => handleSearch(searchQuery)}
             size="sm"
             className="absolute right-2 top-1/2 transform -translate-y-1/2"
-            disabled={isSearching}
+            disabled={isSearching || loading}
           >
-            {isSearching ? 'Searching...' : 'Search'}
+            {isSearching || loading ? 'Searching...' : 'Search'}
           </Button>
         )}
       </div>
