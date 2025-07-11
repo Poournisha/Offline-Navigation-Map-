@@ -833,6 +833,132 @@ export const mockData = {
     },
     {
       id: 13,
+      name: 'Chennai IT Corridor',
+      description: 'OMR and IT parks including Sholinganallur and Siruseri',
+      coordinates: [12.9010, 80.2279],
+      size: '95 MB',
+      lastUpdated: '2024-02-20',
+      status: 'downloaded'
+    },
+    {
+      id: 14,
+      name: 'Coimbatore City',
+      description: 'Coimbatore including RS Puram and Gandhipuram',
+      coordinates: [11.0168, 76.9558],
+      size: '87 MB',
+      lastUpdated: '2024-02-22',
+      status: 'available'
+    },
+    {
+      id: 15,
+      name: 'Madurai Heritage',
+      description: 'Historic Madurai including Meenakshi Temple and Palace',
+      coordinates: [9.9195, 78.1193],
+      size: '76 MB',
+      lastUpdated: '2024-02-25',
+      status: 'downloaded'
+    },
+    {
+      id: 16,
+      name: 'Tiruchirappalli Central',
+      description: 'Trichy including Rock Fort and Srirangam Temple',
+      coordinates: [10.8054, 78.6918],
+      size: '68 MB',
+      lastUpdated: '2024-02-28',
+      status: 'available'
+    },
+    {
+      id: 17,
+      name: 'Salem City',
+      description: 'Salem city center and nearby Yercaud hill station',
+      coordinates: [11.6854, 78.1462],
+      size: '59 MB',
+      lastUpdated: '2024-03-01',
+      status: 'available'
+    },
+    {
+      id: 18,
+      name: 'Tirunelveli District',
+      description: 'Tirunelveli including Nellaiappar Temple area',
+      coordinates: [8.7139, 77.7567],
+      size: '54 MB',
+      lastUpdated: '2024-03-03',
+      status: 'available'
+    },
+    {
+      id: 19,
+      name: 'Vellore Region',
+      description: 'Vellore Fort and Golden Temple areas',
+      coordinates: [12.9184, 79.1325],
+      size: '45 MB',
+      lastUpdated: '2024-03-05',
+      status: 'available'
+    },
+    {
+      id: 20,
+      name: 'Erode-Tirupur Belt',
+      description: 'Textile hub including Erode and Tirupur cities',
+      coordinates: [11.3410, 77.7172],
+      size: '72 MB',
+      lastUpdated: '2024-03-08',
+      status: 'available'
+    },
+    {
+      id: 21,
+      name: 'Thanjavur Cultural Zone',
+      description: 'Big Temple and Thanjavur Palace heritage area',
+      coordinates: [10.7825, 79.1313],
+      size: '49 MB',
+      lastUpdated: '2024-03-10',
+      status: 'available'
+    },
+    {
+      id: 22,
+      name: 'Kodaikanal Hill Station',
+      description: 'Complete Kodaikanal including lake and viewpoints',
+      coordinates: [10.2381, 77.4892],
+      size: '38 MB',
+      lastUpdated: '2024-03-12',
+      status: 'downloaded'
+    },
+    {
+      id: 23,
+      name: 'Ooty Nilgiris',
+      description: 'Ooty town, botanical gardens and toy train route',
+      coordinates: [11.4086, 76.6950],
+      size: '42 MB',
+      lastUpdated: '2024-03-15',
+      status: 'downloaded'
+    },
+    {
+      id: 24,
+      name: 'Kanyakumari Tip',
+      description: 'Southernmost tip including beaches and memorials',
+      coordinates: [8.0883, 77.5385],
+      size: '31 MB',
+      lastUpdated: '2024-03-18',
+      status: 'available'
+    },
+    {
+      id: 25,
+      name: 'Puducherry French Quarter',
+      description: 'Heritage Puducherry including Promenade and Ashram',
+      coordinates: [11.9139, 79.8145],
+      size: '35 MB',
+      lastUpdated: '2024-03-20',
+      status: 'available'
+    },
+    {
+      id: 26,
+      name: 'Dindigul Region',
+      description: 'Dindigul Rock Fort and surrounding areas',
+      coordinates: [10.3624, 77.9694],
+      size: '41 MB',
+      lastUpdated: '2024-03-22',
+      status: 'available'
+    },
+    {
+      id: 27,
       name: 'Kolkata Central',
       description: 'Central Kolkata including Park Street and Victoria Memorial',
       coordinates: [22.5726, 88.3639],
@@ -841,7 +967,7 @@ export const mockData = {
       status: 'available'
     },
     {
-      id: 14,
+      id: 28,
       name: 'Hyderabad HITEC City',
       description: 'Cyberabad area with IT companies and malls',
       coordinates: [17.4435, 78.3772],
@@ -850,7 +976,7 @@ export const mockData = {
       status: 'available'
     },
     {
-      id: 15,
+      id: 29,
       name: 'Pune IT Parks',
       description: 'Hinjewadi and Magarpatta IT park areas',
       coordinates: [18.5912, 73.7389],
