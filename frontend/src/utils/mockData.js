@@ -1026,6 +1026,207 @@ export const mockData = {
       coordinates: [37.5125, 127.1025],
       rating: 4.3,
       reviews: 2100
+    },
+    // Tamil Nadu POIs
+    {
+      id: 6,
+      name: 'Apollo Hospital Chennai',
+      type: 'hospital',
+      coordinates: [13.0358, 80.2297],
+      rating: 4.7,
+      reviews: 3450
+    },
+    {
+      id: 7,
+      name: 'Saravana Bhavan',
+      type: 'restaurant',
+      coordinates: [13.0827, 80.2707],
+      rating: 4.4,
+      reviews: 2890
+    },
+    {
+      id: 8,
+      name: 'Indian Oil Petrol Pump',
+      type: 'fuel',
+      coordinates: [13.0489, 80.2519],
+      rating: 4.1,
+      reviews: 567
+    },
+    {
+      id: 9,
+      name: 'Phoenix MarketCity Chennai',
+      type: 'shopping',
+      coordinates: [13.0569, 80.2570],
+      rating: 4.5,
+      reviews: 4200
+    },
+    {
+      id: 10,
+      name: 'Cafe Coffee Day Marina',
+      type: 'cafe',
+      coordinates: [13.0489, 80.2519],
+      rating: 4.0,
+      reviews: 1200
+    },
+    {
+      id: 11,
+      name: 'Kovai Medical Center',
+      type: 'hospital',
+      coordinates: [11.0168, 76.9558],
+      rating: 4.6,
+      reviews: 2340
+    },
+    {
+      id: 12,
+      name: 'Annapoorna Restaurant',
+      type: 'restaurant',
+      coordinates: [11.0021, 76.9648],
+      rating: 4.3,
+      reviews: 1890
+    },
+    {
+      id: 13,
+      name: 'HP Petrol Pump Coimbatore',
+      type: 'fuel',
+      coordinates: [11.0510, 76.8936],
+      rating: 4.0,
+      reviews: 345
+    },
+    {
+      id: 14,
+      name: 'Meenakshi Mission Hospital',
+      type: 'hospital',
+      coordinates: [9.9195, 78.1193],
+      rating: 4.5,
+      reviews: 1890
+    },
+    {
+      id: 15,
+      name: 'Murugan Idli Shop',
+      type: 'restaurant',
+      coordinates: [9.9252, 78.1198],
+      rating: 4.6,
+      reviews: 3200
+    },
+    {
+      id: 16,
+      name: 'Bharath Petroleum Madurai',
+      type: 'fuel',
+      coordinates: [9.9258, 78.1090],
+      rating: 3.9,
+      reviews: 289
+    },
+    {
+      id: 17,
+      name: 'Trichy SRM Hospital',
+      type: 'hospital',
+      coordinates: [10.8054, 78.6918],
+      rating: 4.4,
+      reviews: 1560
+    },
+    {
+      id: 18,
+      name: 'Vasantha Bhavan',
+      type: 'restaurant',
+      coordinates: [10.8082, 78.6855],
+      rating: 4.2,
+      reviews: 1123
+    },
+    {
+      id: 19,
+      name: 'Reliance Petrol Pump',
+      type: 'fuel',
+      coordinates: [10.8624, 78.6952],
+      rating: 4.1,
+      reviews: 456
+    },
+    {
+      id: 20,
+      name: 'Salem Government Hospital',
+      type: 'hospital',
+      coordinates: [11.6854, 78.1462],
+      rating: 4.0,
+      reviews: 1234
+    },
+    {
+      id: 21,
+      name: 'Hotel Selvam',
+      type: 'restaurant',
+      coordinates: [11.7849, 78.2081],
+      rating: 4.3,
+      reviews: 890
+    },
+    {
+      id: 22,
+      name: 'Essar Petrol Pump Salem',
+      type: 'fuel',
+      coordinates: [11.7898, 77.8007],
+      rating: 3.8,
+      reviews: 234
+    },
+    {
+      id: 23,
+      name: 'Tirunelveli Medical College',
+      type: 'hospital',
+      coordinates: [8.7139, 77.7567],
+      rating: 4.2,
+      reviews: 1567
+    },
+    {
+      id: 24,
+      name: 'Vellore CMC Hospital',
+      type: 'hospital',
+      coordinates: [12.9184, 79.1325],
+      rating: 4.8,
+      reviews: 5600
+    },
+    {
+      id: 25,
+      name: 'Adyar Ananda Bhavan',
+      type: 'restaurant',
+      coordinates: [12.9249, 79.1302],
+      rating: 4.4,
+      reviews: 2100
+    },
+    {
+      id: 26,
+      name: 'Shell Petrol Pump Vellore',
+      type: 'fuel',
+      coordinates: [12.9163, 79.1290],
+      rating: 4.2,
+      reviews: 345
+    },
+    {
+      id: 27,
+      name: 'Thanjavur Medical College',
+      type: 'hospital',
+      coordinates: [10.7825, 79.1313],
+      rating: 4.1,
+      reviews: 1890
+    },
+    {
+      id: 28,
+      name: 'Sree Ariya Bhavan',
+      type: 'restaurant',
+      coordinates: [10.7881, 79.1378],
+      rating: 4.5,
+      reviews: 1678
+    },
+    {
+      id: 29,
+      name: 'Kodaikanal Club Resort',
+      type: 'hotel',
+      coordinates: [10.2381, 77.4892],
+      rating: 4.6,
+      reviews: 1234
+    },
+    {
+      id: 30,
+      name: 'Ooty Savoy Hotel',
+      type: 'hotel',
+      coordinates: [11.4086, 76.6950],
+      rating: 4.7,
+      reviews: 2340
     }
   ]
 };
