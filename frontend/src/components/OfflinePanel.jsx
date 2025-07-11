@@ -21,7 +21,7 @@ import {
   Package
 } from 'lucide-react';
 
-const OfflinePanel = ({ offlineAreas, onDownloadArea, onDeleteArea }) => {
+const OfflinePanel = ({ offlineAreas, onDownloadArea, onDeleteArea, loading = false }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedArea, setSelectedArea] = useState(null);
   const [isOnline, setIsOnline] = useState(true);
