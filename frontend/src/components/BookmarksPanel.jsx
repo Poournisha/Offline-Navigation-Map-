@@ -25,7 +25,8 @@ const BookmarksPanel = ({
   onLocationSelect, 
   onRemoveBookmark, 
   onRouteRequest,
-  currentLocation 
+  currentLocation,
+  loading = false
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
