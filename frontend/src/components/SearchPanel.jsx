@@ -26,7 +26,8 @@ const SearchPanel = ({
   onLocationSelect, 
   onRouteRequest, 
   onBookmarkAdd,
-  currentLocation 
+  currentLocation,
+  loading = false
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
