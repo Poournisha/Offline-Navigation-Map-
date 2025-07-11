@@ -9,14 +9,14 @@ from datetime import datetime
 import asyncio
 
 # Import models
-from models.location import Location, LocationCreate, LocationUpdate, SearchQuery
-from models.bookmark import Bookmark, BookmarkCreate, BookmarkUpdate
-from models.route import Route, RouteRequest, RouteInstruction, SavedRoute
-from models.offline_area import OfflineArea, OfflineAreaCreate, OfflineAreaUpdate, DownloadRequest
-from models.poi import PointOfInterest, POICreate, POIUpdate, POISearch
+from .models.location import Location, LocationCreate, LocationUpdate, SearchQuery
+from .models.bookmark import Bookmark, BookmarkCreate, BookmarkUpdate
+from .models.route import Route, RouteRequest, RouteInstruction, SavedRoute
+from .models.offline_area import OfflineArea, OfflineAreaCreate, OfflineAreaUpdate, DownloadRequest
+from .models.poi import PointOfInterest, POICreate, POIUpdate, POISearch
 
 # Import services
-from services.database import DatabaseService
+from .services.database import DatabaseService
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv = lambda path: None  # Simple placeholder
